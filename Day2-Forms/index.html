@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Day 2 — Forms & Validation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Sign Up / Isdiiwaangalin</h1>
+    <form id="signup">
+      <label for="email">Email:</label>
+      <input id="email" name="email" type="email" required placeholder="you@example.com">
+
+      <label for="password">Password:</label>
+      <input id="password" name="password" type="password" minlength="6" required placeholder="Min 6 chars">
+
+      <label for="dob">Birthday / Dhalasho:</label>
+      <input id="dob" name="dob" type="date">
+
+      <label for="color">Favorite color / Midabka:</label>
+      <input id="color" name="color" type="color" value="#0b5cff">
+
+      <fieldset>
+        <legend>Preferences / Doorasho</legend>
+        <label><input type="checkbox" name="newsletter" checked> Subscribe newsletter</label>
+      </fieldset>
+
+      <button type="submit">Register / Diiwaangali</button>
+    </form>
+  </main>
+</body>
+</html>

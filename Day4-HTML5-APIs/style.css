@@ -1,0 +1,4 @@
+/* Day 4 — APIs */
+body{font-family:Inter,Arial,sans-serif;padding:20px;background:#fbfbff;color:#111}
+main{max-width:720px;margin:0 auto;background:white;padding:20px;border-radius:10px;box-shadow:0 6px 20px rgba(11,92,255,0.06)}
+button,input{padding:10px;margin-top:8px;border-radius:6px;border:1px solid #dcdde1;width:100%}

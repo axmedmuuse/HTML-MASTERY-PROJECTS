@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Day 5 — Accessibility</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Accessible Contact Form / Foom La Fahmi Karo</h1>
+    <form>
+      <label for="fname">Name / Magac</label>
+      <input id="fname" aria-label="Full name" type="text" placeholder="Your name" required>
+
+      <label for="email">Email</label>
+      <input id="email" type="email" aria-required="true" placeholder="you@example.com">
+
+      <label for="message">Message</label>
+      <textarea id="message" aria-label="Message" rows="5"></textarea>
+
+      <button type="submit">Send / Dir</button>
+    </form>
+    <section aria-live="polite" id="status" style="margin-top:12px"></section>
+  </main>
+</body>
+</html>

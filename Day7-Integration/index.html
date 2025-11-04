@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Day 7 — Integration (Frontend)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>MERN Contact Form (HTML Frontend)</h1>
+    <form id="contact">
+      <label for="name">Name</label>
+      <input id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+    <p class="hint">Tip: Later connect this form to a Node/Express endpoint POST /api/contact</p>
+  </main>
+
+  <script>
+  // Minimal demo: prevent actual submit to let you test in static hosting
+  document.getElementById('contact').addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Form ready to be connected to backend — data preview in console.');
+    const fd = new FormData(e.target);
+    console.log(Object.fromEntries(fd.entries()));
+  });
+  </script>
+</body>
+</html>

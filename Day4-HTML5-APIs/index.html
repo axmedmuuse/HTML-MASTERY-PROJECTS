@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Day 4 — HTML5 APIs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Geolocation & Storage / Meel-ogaal & Keydin</h1>
+    <button id="getLocation">Get My Location / Hel Goobtayda</button>
+    <p id="output">No location yet / Meel la helin</p>
+
+    <h2>LocalStorage Demo</h2>
+    <label for="note">Note:</label>
+    <input id="note" placeholder="Type a short note">
+    <button id="save">Save Note</button>
+    <p id="saved">Saved: —</p>
+  </main>
+
+  <script>
+  // Progressive: small vanilla JS to demo APIs (kept minimal)
+  const out = document.getElementById('output');
+  document.getElementById('getLocation').addEventListener('click', () => {
+    if (!navigator.geolocation) return out.textContent = 'Geolocation not supported';
+    navigator.geolocation.getCurrentPosition(pos => {
+      const {latitude, longitude} = pos.coords;
+      out.textContent = `Lat: ${latitude.toFixed(4)}, Lng: ${longitude.toFixed(4)}`;
+      localStorage.setItem('lastLocation', JSON.stringify({latitude,longitude}));
+    }, err => out.textContent = 'Permission denied or error');
+  });
+
+  const noteInput = document.getElementById('note');
+  document.getElementById('save').addEventListener('click', () => {
+    const v = noteInput.value || '';
+    localStorage.setItem('quickNote', v);
+    document.getElementById('saved').textContent = 'Saved: ' + v;
+  });
+
+  // Load saved
+  const s = localStorage.getItem('quickNote');
+  if (s) document.getElementById('saved').textContent = 'Saved: ' + s;
+  </script>
+</body>
+</html>
