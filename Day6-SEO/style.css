@@ -1,4 +1,19 @@
 /* Day 6 — SEO */
-body{font-family:Inter,Arial,sans-serif;background:#fff;padding:20px;color:#111}
-header{background:#111;padding:18px;color:white;border-radius:8px}
-main{max-width:900px;margin:18px auto}
+body {
+    font-family: Inter, Arial, sans-serif;
+    background: #fff;
+    padding: 20px;
+    color: #111
+}
+
+header {
+    background: #111;
+    padding: 18px;
+    color: white;
+    border-radius: 8px
+}
+
+main {
+    max-width: 900px;
+    margin: 18px auto
+}
